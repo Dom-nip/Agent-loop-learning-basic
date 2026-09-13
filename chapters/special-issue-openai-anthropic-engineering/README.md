@@ -12,8 +12,6 @@
 | **三 · 编排与多智能体**     | 协作编排   | [08](./08-anthropic-multi-agent-research-system/commentary.md) Multi-Agent Research System（2025-06）· [09](./09-anthropic-parallel-claudes-c-compiler/commentary.md) Parallel Claudes 造 C 编译器（2026-02）· [10](./10-openai-orchestrating-agents/commentary.md) Routines & Handoffs（2024-11）· [11](./11-openai-agents-sdk/commentary.md) Agents SDK 五原语（2025-03→）                                                                             | 多 agent 的收益与代价如何权衡？编排的最小原语是什么？          |
 | **四 · Harness 与长时程**   | 长时程运行 | [12](./12-anthropic-effective-harnesses/commentary.md) Effective Harnesses（2025-11）· [13](./13-anthropic-harness-design-long-running-apps/commentary.md) Harness Design（2026-03）· [14](./14-openai-harness-engineering/commentary.md) Harness Engineering（OpenAI, 2026-02）                                                                                                                                                                          | 跨上下文窗口依靠何种机制延续？harness 的组件何时增减？         |
 
-**推荐阅读顺序**：入门路径为 01 → 02（两份总纲对照）→ 12（篇幅最短的长时程文献）；系统学习按组内编号顺序；时间有限时的最小阅读集为三篇：01（宪法式方法论）、12（长时程最小解）、14（工业级 harness 的完整形态）。
-
 ## 两家实验室的共识
 
 分歧之下存在更深层的共识——以下五条已成为 2025-2026 年的行业事实标准：
