@@ -1,0 +1,2 @@
+# stage10 · Skill 与 MCP —— 依赖清单
+openai>=1.40        # 唯一必需（MCP 用最小自实现 stdio client，不依赖 mcp SDK）

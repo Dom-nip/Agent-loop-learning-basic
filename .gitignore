@@ -1,0 +1,29 @@
+# ═══════════════ 密钥与本地配置（绝不上传）═══════════════
+config.py
+
+# 作者侧维护脚本（术语表生成/校验），不属于教程内容，不上传（仅根目录，不影响 stage 的 src/tools/）
+/tools/
+
+# ═══════════════ Python 运行产物 ═══════════════
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# ═══════════════ agent 运行时产物（沙盒 / 日志 / 会话 / 记忆）═══════════════
+loop-engineering/*/workspace/*
+!loop-engineering/*/workspace/.gitkeep
+loop-engineering/*/logs/
+loop-engineering/*/sessions/
+loop-engineering/*/memory/
+loop-engineering/*/notes/
+loop-engineering/*/jobs/
+loop-engineering/*/checkpoint.json
+loop-engineering/*/permissions.json
+
+# ═══════════════ 编辑器 / 系统文件 / 工具缓存 ═══════════════
+.zcode/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini

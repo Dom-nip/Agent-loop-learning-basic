@@ -1,0 +1,2 @@
+# stage01 · ReAct 文本协议 —— 依赖清单
+openai>=1.40        # 唯一必需：OpenAI 兼容协议客户端（配置见 config.py）

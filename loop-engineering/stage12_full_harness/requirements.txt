@@ -1,0 +1,2 @@
+# stage12 · 完整 harness —— 依赖清单
+openai>=1.40        # 唯一必需

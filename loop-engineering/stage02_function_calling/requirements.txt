@@ -1,0 +1,2 @@
+# stage02 · Function Calling —— 依赖清单
+openai>=1.40        # 唯一必需（tool_calls / tools 参数需要 v1.x SDK）

@@ -1,0 +1,3 @@
+# stage11 · 评测 harness —— 依赖清单
+openai>=1.40        # LLM 调用
+PyYAML>=6.0         # 测试用例集是 YAML 格式（cases/*.yaml）

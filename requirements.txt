@@ -1,0 +1,7 @@
+# Agent 教程依赖（要求 Python ≥ 3.8；开发实测环境为 Python 3.13）
+# 阅读正文与述评零依赖；以下仅在运行示例代码 / 实战册时安装（一次安装覆盖全部 stage）。
+openai>=1.40        # 核心必需：实战册 12 个 stage 与正文示例代码（OpenAI 兼容协议客户端）
+
+# 可选组件（一并列出，随主安装一并就绪）：
+PyYAML>=6.0         # stage11 评测 harness：解析 YAML 用例集
+mcp>=1.0            # 第 17 章 MCP 演示：server 源码内嵌于 book.md，复制运行时装

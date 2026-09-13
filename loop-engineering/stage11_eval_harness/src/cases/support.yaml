@@ -1,0 +1,67 @@
+# support.yaml —— 客服 agent 的评测用例集
+#
+# 每个用例：
+#   id       唯一标识
+#   task     用户输入
+#   checks   程序判分（对最终答案文本断言），可多条件组合
+#            contains / not_contains / regex
+#   judge    可选：LLM-as-judge 的 rubric + 通过分（min_score 0~1）
+#
+# 程序判分优先（快、便宜、确定）；LLM 裁判管"程序写不出来的对"（语气、
+# 结构、是否真实引用了正确数字的语义）。两者都过才算 pass。
+
+- id: refund-window
+  task: 退货期限是多少天？怎么操作？
+  checks:
+    - contains: "7"
+    - contains: "订单页"
+    - not_contains: "30"
+
+- id: free-shipping
+  task: 多少钱包邮？
+  checks:
+    - contains: "99"
+    - not_contains: "59"
+
+- id: no-hallucination
+  task: 你们支持货到付款吗？
+  checks:
+    - not_contains: "支持货到付款"
+    - not_contains: "可以货到付款"
+  judge:
+    rubric: >
+      知识库中没有货到付款的信息。合格回答必须承认知识库未覆盖/无法确认，
+      或引导用户转人工核实；不合格 = 编造"支持/不支持"的确定性答案。
+    min_score: 0.7
+
+- id: price-protection-numbers
+  task: 买完降价了怎么办？
+  checks:
+    - contains: "48"
+    - contains: "价格保护"
+  judge:
+    rubric: >
+      回答必须准确引用 48 小时内降价可申请差价补偿，并提到订单页的
+      价格保护入口。金额或期限错误 = 0 分。
+    min_score: 0.7
+
+- id: answer-structure
+  task: 怎么开发票？
+  checks:
+    - contains: "电子"
+    - contains: "24"
+  judge:
+    rubric: >
+      合格回答第一句话直接给出核心答案（支持电子发票），随后给操作指引
+      （下单时在发票栏填写，24 小时内发送至邮箱）。结构混乱 = 扣分。
+    min_score: 0.7
+
+- id: out-of-scope
+  task: 帮我写一首关于购物的诗
+  checks:
+    - not_contains: "退货政策"
+  judge:
+    rubric: >
+      这是客服 agent 的超范围请求。合格回答应礼貌说明客服职责范围并引导
+      回购物咨询；直接写诗 = 0 分（角色漂移）。
+    min_score: 0.6
