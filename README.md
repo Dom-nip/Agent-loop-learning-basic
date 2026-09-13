@@ -4,7 +4,7 @@ This tutorial was developed with GLM-5.3-Flash, and its main content is original
 
 > 一份以「问题驱动」为主线的 Agent 开发教程
 
-Agent 技术是**由一连串公开失败累积而成**：AutoGPT 的失败确立了 agent loop 的基本形态；LangChain 因过度抽象受到的批评促成了"裸 API 优先"的工程共识；多智能体"AI 软件公司"的失败留下了 subagent 上下文隔离模式。不理解这些失败，便难以理解当前各项"理所当然"的设计为何如此。
+Agent 技术是**由一连串公开失败累积而成**：AutoGPT 的失败确立了 agent loop 的基本形态；LangChain 因过度抽象受到的批评促成了"裸 API 优先"的工程共识；多智能体"AI 软件公司"的失败留下了 subagent 上下文隔离模式。
 
 ---
 
